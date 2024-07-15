@@ -7,17 +7,26 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    
-    <input id="clp" type="number" placeholder="0">
+    <div class="container">
+        <h1>Conversor de monedas Nacional</h1>
+        <div class="converter-box">
+            <label for="clp">Pesos CLP</label>
+            <input id="clp" type="number" placeholder="0">
 
-    <select name="monedaConvertir" id="monedaConvertir">
-        <option value="seleccionarMoneda">Selecciona una moneda</option>
-    </select>
+            <label for="monedaConvertir">Moneda a convertir:</label>
+            <select name="monedaConvertir" id="monedaConvertir">
+                <option value="seleccionarMoneda">Selecciona una moneda</option>
+            </select>
 
-    <button onclick="convertir()">Convertir</button>
+            <button onclick="convertir()">Convertir</button>
+            <p id="total">Total: 0</p>
+        </div>
 
-    <p id="total">total:</p>
+        <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
 
+    <!--Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
